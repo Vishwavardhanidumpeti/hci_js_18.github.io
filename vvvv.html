@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Blog</title>
+</head>
+<body>
+    <header>
+        <h1>My Profile Blog</h1>
+    </header>
+    <div class="container">
+        <section id="profile">
+            <h2>Profile Information</h2>
+        </section>
+        
+        
+    </div>
+    
+    <script>
+        
+        var profileData = {
+            name: "vishwavardhani",
+            dateOfBirth: "april 14, 2004",
+            collegeName: "sr university ",
+            department: "Computer Science",
+            year: "2nd Year",
+            
+            location: "waranagl"
+        };
+
+      
+        function updateProfileInformation() {
+            var profileSection = document.getElementById("profile");
+            profileSection.innerHTML = "<h2>Profile Information</h2>";
+            for (var key in profileData) {
+                var paragraph = document.createElement("p");
+                paragraph.textContent = key + ": " + profileData[key];
+                profileSection.appendChild(paragraph);
+            }
+        }
+
+       
+        updateProfileInformation();
+    </script>
+</body>
+</html>
